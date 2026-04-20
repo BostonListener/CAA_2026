@@ -121,15 +121,13 @@ acds3,-9.698118,-67.213014,square,GE_2023.09.16,164,
 acds4,-10.073635,-67.320639,square,GE_2014-11-17,200,
 ```
 
-| Column | Type | Description | Required |
-|--------|------|-------------|----------|
-| `site_id` | string | Unique identifier for the site | ✓ Yes |
-| `latitude` | float | Latitude in decimal degrees (WGS84) | ✓ Yes |
-| `longitude` | float | Longitude in decimal degrees (WGS84) | ✓ Yes |
-| `site_type` | string | Type of site (e.g., oval, square, circular) | Optional |
-| `source` | string | Data source reference | Optional |
-| `a_width` | float | Site width dimension A in meters | Optional |
-| `b_width` | float | Site width dimension B in meters | Optional |
+| site_id | latitude | longitude | site_type | source | a_width | b_width |
+|---------|----------|-----------|-----------|--------|---------|---------|
+| abuno | -9.979387 | -66.734946 | oval | Kalliola_2024 | 342 | 315 |
+| abuov | -10.079579 | -66.869467 | oval | Kalliola_2024 | 220 | 210 |
+| acds2 | -9.758053 | -67.194505 | square | GE_2024.08.20 | 175 | |
+| acds3 | -9.698118 | -67.213014 | square | GE_2023.09.16 | 164 | |
+| acds4 | -10.073635 | -67.320639 | square | GE_2014-11-17 | 200 | |
 
 **Notes:**
 - `a_width` and `b_width` are used to calculate site radius for position sampling
@@ -190,7 +188,7 @@ The pipeline will create:
 
 ## Example Output
 
-![Example dataset sample](./images/00_example.png)
+![Example dataset sample](../images/00_example.png)
 
 *Example showing a positive sample with RGB composite and multiple label variants (hard + soft with different sigma values)*
 
