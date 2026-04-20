@@ -121,6 +121,16 @@ acds3,-9.698118,-67.213014,square,GE_2023.09.16,164,
 acds4,-10.073635,-67.320639,square,GE_2014-11-17,200,
 ```
 
+| Column | Type | Description | Required |
+|--------|------|-------------|----------|
+| `site_id` | string | Unique identifier for the site | ✓ Yes |
+| `latitude` | float | Latitude in decimal degrees (WGS84) | ✓ Yes |
+| `longitude` | float | Longitude in decimal degrees (WGS84) | ✓ Yes |
+| `site_type` | string | Type of site (e.g., oval, square, circular) | Optional |
+| `source` | string | Data source reference | Optional |
+| `a_width` | float | Site width dimension A in meters | Optional |
+| `b_width` | float | Site width dimension B in meters | Optional |
+
 **Notes:**
 - `a_width` and `b_width` are used to calculate site radius for position sampling
 - If missing, defaults to 250m radius
@@ -180,7 +190,7 @@ The pipeline will create:
 
 ## Example Output
 
-![Example dataset sample](images/00_example.png)
+![Example dataset sample](./images/00_example.png)
 
 *Example showing a positive sample with RGB composite and multiple label variants (hard + soft with different sigma values)*
 
