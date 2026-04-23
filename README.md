@@ -7,16 +7,19 @@
 **A User-Friendly Workflow for Predictive Site Detection**
 
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Presentation](https://img.shields.io/badge/Presentation-Google_Drive-4285F4?logo=googledrive)](https://drive.google.com/file/d/1rJkwbhSlKBI2hIDm661J4iMgsOZtOPDx/view)
-![Google Earth Engine](https://img.shields.io/badge/Google-Earth%20Engine-4285f4.svg)
-![Sentinel-2](https://img.shields.io/badge/Sentinel--2-Satellite%20Imagery-5B9BD5.svg)
-![SRTM](https://img.shields.io/badge/SRTM-DEM%20Data-70AD47.svg)
-![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-EE4C2C.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Domain](https://img.shields.io/badge/domain-Archaeology-8B4513.svg)
+![Google Earth Engine](https://img.shields.io/badge/Google-Earth%20Engine-4285f4.svg)
+![Deep Learning](https://img.shields.io/badge/Deep-Learning-EE4C2C.svg)
+![Sentinel-2](https://img.shields.io/badge/Sentinel--2-Satellite%20Imagery-5B9BD5.svg)
+![FABDEM](https://img.shields.io/badge/FABDEM-DEM%20Data-70AD47.svg)
+![CNN](https://img.shields.io/badge/CNN-Classification-FF6B6B.svg)
+![U-Net](https://img.shields.io/badge/U--Net-Segmentation-9B59B6.svg)
 
 *Presented at CAA 2026 (Computer Applications and Quantitative Methods in Archaeology)*  
 *Session S45: Computational Archaeology at Scale*
+
+[![Presentation](https://img.shields.io/badge/Presentation-Google_Drive-4285F4?logo=googledrive)](https://drive.google.com/file/d/1rJkwbhSlKBI2hIDm661J4iMgsOZtOPDx/view)
 
 </div>
 
@@ -29,7 +32,7 @@ This repository provides a comprehensive end-to-end pipeline for archaeological 
 ### Key Features
 
 - **End-to-end workflow**: Complete pipeline from raw data ingestion to trained models
-- **Multi-modal fusion**: Combines Sentinel-2 optical imagery with FABDEM/SRTM terrain data
+- **Multi-modal fusion**: Combines Sentinel-2 optical imagery with FABDEM terrain data
 - **Two-stage detection**: Classification for candidate screening + segmentation for spatial localization
 - **Smart negative sampling**: Integrated negatives from site surroundings + landcover negatives for robustness
 - **Transfer learning**: Few-shot adaptation enables cross-region generalization
@@ -128,5 +131,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 
 - Archaeological site data: [James Q. Jacobs Geoglyph Inventory](https://jqjacobs.net/archaeology/geoglyph.html)
-- Remote sensing data: Google Earth Engine (Sentinel-2, FABDEM/SRTM)
+- Remote sensing data: Google Earth Engine (Sentinel-2, FABDEM)
 - Conference: CAA 2026, Vienna, Austria
