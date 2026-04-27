@@ -81,11 +81,20 @@ Multi-modal dataset construction from open records and Google Earth Engine.
 
 ---
 
-### 🚧 Stage 1: Classification Model
+### ✅ Stage 1: Classification Model
 
-**Coming soon...**
+CNN-based binary classifier for patch-level archaeological site detection.
 
-Binary classification for patch-level site detection with cross-region transfer learning.
+- **Input**: 11-channel multi-spectral patches (100×100 pixels)
+- **Output**: Binary predictions (site vs. non-site) with confidence scores
+- **Architecture**: Lightweight CNN (~500K params) with dual pooling
+- **Features**:
+  - Class-balanced training with weighted BCE loss
+  - Data augmentation (flips, rotations, noise)
+  - Three operating thresholds (F1, F2, Precision @ Recall ≥ 0.85)
+  - Few-shot transfer learning for cross-region adaptation
+
+**[→ Go to Classification Model](01_Classification_Model/)**
 
 ---
 
