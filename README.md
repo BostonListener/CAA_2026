@@ -58,7 +58,7 @@ This repository provides a comprehensive end-to-end pipeline for archaeological 
 
 ## Project Status
 
-### ✅ Stage 0: Data Preparation
+### Stage 0: Data Preparation
 
 Multi-modal dataset construction from open records and Google Earth Engine.
 
@@ -81,7 +81,7 @@ Multi-modal dataset construction from open records and Google Earth Engine.
 
 ---
 
-### ✅ Stage 1: Classification Model
+### Stage 1: Classification Model
 
 CNN-based binary classifier for patch-level archaeological site detection.
 
@@ -98,7 +98,7 @@ CNN-based binary classifier for patch-level archaeological site detection.
 
 ---
 
-### ✅ Stage 2: Segmentation Model
+### Stage 2: Segmentation Model
 
 SegFormer-based pixel-level localization for archaeological site boundary prediction.
 
