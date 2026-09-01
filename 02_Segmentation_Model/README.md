@@ -13,7 +13,6 @@ Key features:
 * Uses **group-aware train/validation/test splitting** to avoid site-level data leakage
 * Adapts an ImageNet-pretrained **SegFormer-B0** from 3-channel RGB to 11-channel geospatial input
 * Selects the final prediction threshold using the **validation set only**
-* Supports checkpoint-based resume for interrupted Colab training
 
 ---
 
