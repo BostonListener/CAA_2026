@@ -7,7 +7,7 @@
 **A User-Friendly Workflow for Predictive Site Detection**
 
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Code License](https://img.shields.io/badge/code%20license-MIT-green.svg)
 ![Domain](https://img.shields.io/badge/domain-Archaeology-8B4513.svg)
 ![Google Earth Engine](https://img.shields.io/badge/Google-Earth%20Engine-4285f4.svg)
 ![Deep Learning](https://img.shields.io/badge/Deep-Learning-EE4C2C.svg)
@@ -15,7 +15,7 @@
 ![Sentinel-2](https://img.shields.io/badge/Sentinel--2-Satellite%20Imagery-5B9BD5.svg)
 ![FABDEM](https://img.shields.io/badge/FABDEM-DEM%20Data-70AD47.svg)
 ![CNN](https://img.shields.io/badge/CNN-Classification-FF6B6B.svg)
-![U-Net](https://img.shields.io/badge/U--Net-Segmentation-9B59B6.svg)
+![SegFormer](https://img.shields.io/badge/SegFormer-Segmentation-9B59B6.svg)
 
 *Presented at CAA 2026 (Computer Applications and Quantitative Methods in Archaeology)*  
 *Session S45: Computational Archaeology at Scale*
@@ -50,7 +50,7 @@ This repository provides a comprehensive end-to-end pipeline for archaeological 
 │  CNN classifier → Candidate site detection          │
 ├─────────────────────────────────────────────────────┤
 │  Stage 2: Localization (Spatial Refinement)         │
-│  U-Net segmentation → Site boundary prediction      │
+│  SegFormer segmentation → Site boundary prediction  │
 └─────────────────────────────────────────────────────┘
 ```
 
@@ -98,11 +98,21 @@ CNN-based binary classifier for patch-level archaeological site detection.
 
 ---
 
-### 🚧 Stage 2: Segmentation Model
+### ✅ Stage 2: Segmentation Model
 
-**Coming soon...**
+SegFormer-based pixel-level localization for archaeological site boundary prediction.
 
-U-Net based spatial localization for site boundary prediction.
+- **Input**: 11-channel positive patches (100×100 pixels)
+- **Output**: Pixel-level site probability masks and binary segmentation masks
+- **Architecture**: SegFormer-B0 adapted from 3-channel RGB to 11-channel geospatial input
+- **Features**:
+  - Soft Gaussian masks for training and hard masks for evaluation
+  - Group-aware train/validation/test splitting to reduce site-level leakage
+  - Training-only normalization and spatial data augmentation
+  - Validation-based threshold selection using Dice score
+  - Resume-safe checkpointing and Hugging Face model export
+
+**[→ Go to Segmentation Model](02_Segmentation_Model/)**
 
 ---
 
@@ -134,7 +144,16 @@ If you use this work in your research, please cite:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+The original code in this repository is released under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+### Third-Party Model License
+
+The segmentation workflow uses the pretrained **NVIDIA SegFormer-B0** model (`nvidia/mit-b0`). The pretrained SegFormer model and weights are subject to the **NVIDIA Source Code License for SegFormer**, which restricts their use to **non-commercial research and evaluation purposes**.
+
+- [SegFormer-B0 model card on Hugging Face](https://huggingface.co/nvidia/mit-b0)
+- [NVIDIA Source Code License for SegFormer](https://github.com/NVlabs/SegFormer/blob/master/LICENSE)
+
+The repository's MIT License does **not** replace or override the licenses of third-party pretrained models, datasets, libraries, or other external resources. Users are responsible for complying with the applicable third-party license terms.
 
 ---
 
