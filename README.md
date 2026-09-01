@@ -160,5 +160,6 @@ The repository's MIT License does **not** replace or override the licenses of th
 ## Acknowledgments
 
 - Archaeological site data: [James Q. Jacobs Geoglyph Inventory](https://jqjacobs.net/archaeology/geoglyph.html)
+- Segmentation architecture: [SegFormer](https://arxiv.org/abs/2105.15203) by Xie et al. (2021), using the [`nvidia/mit-b0`](https://huggingface.co/nvidia/mit-b0) pretrained encoder from Hugging Face
 - Remote sensing data: Google Earth Engine (Sentinel-2, FABDEM)
-- Conference: CAA 2026, Vienna, Austria
+- Conference: [CAA 2026](https://2026.caaconference.org/), Vienna, Austria
