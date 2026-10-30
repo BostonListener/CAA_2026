@@ -21,6 +21,7 @@
 *Session S45: Computational Archaeology at Scale*
 
 [![Presentation](https://img.shields.io/badge/Presentation-Google_Drive-4285F4?logo=googledrive)](https://drive.google.com/file/d/1rJkwbhSlKBI2hIDm661J4iMgsOZtOPDx/view)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23001052.svg)](https://doi.org/10.5281/zenodo.23001052)
 
 </div>
 
@@ -121,11 +122,14 @@ SegFormer-based pixel-level localization for archaeological site boundary predic
 If you use this work in your research, please cite:
 
 ```bibtex
-@inproceedings{li2026accessible,
-  title={Accessible AI for Archaeology: A User-Friendly Workflow for Predictive Site Detection},
-  author={Li, Linduo and Wu, Yifan and Wang, Zifeng and Zhuang, Yongjie},
-  booktitle={Proceedings of CAA 2026},
-  year={2026}
+@misc{li2026accessible,
+  title     = {Accessible AI for Archaeology: A User-Friendly Workflow for Predictive Site Detection},
+  author    = {Li, Linduo and Wu, Yifan and Wang, Zifeng and Zhuang, Yongjie},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23001052},
+  url       = {https://doi.org/10.5281/zenodo.23001052},
+  note      = {Preprint}
 }
 ```
 
